@@ -23,6 +23,10 @@ public class Main {
 
         System.out.println("Total number of deadlines: " + countDeadlines(tasksData));
 
+        printDeadlinesUsingStreams(tasksData);
+
+        System.out.println("\nWith filter: ");
+        filterByString(tasksData, "11").forEach(System.out::println);
     }
 
     private static int countDeadlines(ArrayList<Task> tasksData) {
